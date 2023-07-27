@@ -1,0 +1,57 @@
+body {
+  background-color: hsl(300, 25%, 95%);
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.title {
+  color: hsl(300, 80%, 30%);
+  font-family: "Henny Penny", cursive;
+  font-size: 7rem;
+  font-weight: normal;
+  text-align: center;
+  margin: 0;
+  user-select: none;
+}
+
+.score {
+  text-align: center;
+  color: hsl(120, 100%, 25%);
+  font-family: "Codystar", cursive;
+  font-size: 4rem;
+  left: 0;
+  top: 0;
+  height: 9rem;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(0, 0%, 100%);
+  border: 1px solid hsl(300, 100%, 25%);
+  font-size: 6rem;
+  box-shadow: 5px 5px 10px 1px hsl(300, 40%, 68%);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 9rem;
+  height: 9rem;
+  margin: 16px;
+  user-select: none;
+  cursor: pointer;
+}

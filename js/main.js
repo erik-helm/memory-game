@@ -26,10 +26,12 @@ function shuffle(deck) {
 }
 
 function play(index) {
+  if (cards.item(index).textContent) return;
+
   if (plays[0] === null) {
     plays[0] = index
     revealCard(index);
-  } else if (plays[1] === null && plays[0] !== index) {
+  } else if (plays[1] === null) {
     plays[1] = index
     revealCard(index);
     handlePlays();

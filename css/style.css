@@ -54,3 +54,8 @@ body {
   user-select: none;
   cursor: pointer;
 }
+
+.play-again {
+  font-size: 2rem;
+  padding: 12px 16px;
+}

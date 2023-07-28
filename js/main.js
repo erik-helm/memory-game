@@ -20,11 +20,14 @@ cards.forEach((card, index) => {
   card.dataset.index = index;
 });
 
-const board = document.querySelector('.board');
-board.addEventListener('click', e => {
+document.querySelector('.board').addEventListener('click', e => {
   if (e.target.classList.contains('card')) {
     play(parseInt(e.target.dataset.index));
   };
+});
+
+document.querySelector('.play-again').addEventListener('click', e => {
+  window.location.reload();
 });
 
 const scoreDisplay = document.querySelector('.score');

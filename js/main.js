@@ -1,7 +1,15 @@
 'use strict';
 
-const uniqueCards = ['😀', '🥸', '🤡', '👽', '😹', '👻'];
-const deck = [...uniqueCards, ...uniqueCards, ...uniqueCards, ...uniqueCards];
+const cardChoices = [
+  '😀', '🥸', '🤡', '👽', '😹', '👻',
+  '🐢', '🌍', '🦴', '🚀', '😎', '🤖',
+  '☠️', '🧟', '👑', '👼🏾', '🦕', '🌈',
+];
+
+shuffle(cardChoices);
+
+const cardsUsed = cardChoices.slice(0, 6);
+const deck = [...cardsUsed, ...cardsUsed, ...cardsUsed, ...cardsUsed];
 shuffle(deck);
 
 const plays = Array(2).fill(null);
@@ -21,8 +29,8 @@ board.addEventListener('click', e => {
 
 const scoreDisplay = document.querySelector('.score');
 
-function shuffle(deck) {
-  deck.sort(() => Math.random() - 0.5);
+function shuffle(cards) {
+  cards.sort(() => Math.random() - 0.5);
 }
 
 function play(index) {
